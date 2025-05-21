@@ -27,3 +27,46 @@ Correct and incorrect clicks trigger different sound effects for enhanced feedba
 Optimized for both desktop and mobile play.
 
 https://github.com/user-attachments/assets/5da3e547-d302-47c0-9698-900599744d1e
+
+## Instructions to Run the Game
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/divyaaachaudhary/Spot-The-Difference.git
+   cd Spot-The-Difference
+   ```
+
+2. **Install dependencies:**
+
+   ```bash
+   npm install
+   ```
+
+3. **Start the game:**
+
+   ```bash
+   npm start
+   ```
+
+4. **Open your browser:**
+
+   * The game will automatically open in your default browser, or
+   * Open [http://localhost:3000](http://localhost:3000) manually to play.
+
+
+
+##  How the Game Uses the JSON File
+
+* The game reads a **JSON file** (e.g., `levels.json`) to load different levels dynamically.
+* Each entry in the JSON file contains:
+
+  * The **image sources** for the left and right panels.
+  * The **coordinates** of the differences to check if a user has clicked in the correct spot.
+  * Optional metadata like level name, difficulty, or hints.
+
+This approach makes it easy to:
+
+* Add new levels without modifying the main code.
+* Adjust difficulty by updating just the JSON file.
+
