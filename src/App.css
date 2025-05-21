@@ -1,38 +1,156 @@
-.App {
+.game-container {
+  padding: 2rem;
   text-align: center;
+  background: linear-gradient(135deg, #b57fe0, #F8F8FF, #b57fe0);
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
+
+.game-header h1 {
+  font-size: 2.5rem;
+  color: #6A5ACD;
+  background: linear-gradient(to right, #D8BFD8, #E6E6FA);
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(138, 43, 226, 0.2);
+}
+
+.game-header p {
+  font-size: 1.2rem;
+  color: #4B0082;
+  margin-top: 0.5rem;
+}
+
+
+.image-row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.image-wrapper {
+  position: relative;
+  background: linear-gradient(135deg, #E6E6FA, #D8BFD8);
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(106, 90, 205, 0.25);
+}
+
+
+.game-image {
+  max-width: 300px;
+  border-radius: 12px;
+  cursor: pointer;
+  display: block;
+}
+
+.correct-circle {
+  position: absolute;
+  border: 6px solid #32CD32;
+  border-radius: 50%;
+  pointer-events: none;
+  box-shadow: 0 0 8px rgba(50, 205, 50, 0.4);
+}
+
+
+.wrong-circle {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wrong-circle::before,
+.wrong-circle::after {
+  content: '';
+  position: absolute;
+  left: 9px;
+  top: 0;
+  width: 2px;
+  height: 20px;
+  background-color: #DC143C;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.wrong-circle::before {
+  transform: rotate(45deg);
+}
+
+.wrong-circle::after {
+  transform: rotate(-45deg);
+}
+
+
+.footer {
+  margin-top: 2rem;
+  font-size: 1.1rem;
+  color: #4B0082;
+}
+
+.footer button {
+  background-color: #9370DB;
   color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin-left: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.footer button:hover {
+  background-color: #7B68EE;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.home-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: linear-gradient(135deg, #b57fe0, #F8F8FF, #b57fe0);
+  padding: 2rem 3rem;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  z-index: 9999;
+  max-width: 100%;
+  width: 700px;
+}
+
+.home-container h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+
+
+.home-container button {
+  padding: 12px 24px;
+  font-size: 1rem;
+  background-color: #9370DB;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.home-container button:hover {
+  background-color: #7B68EE;
+}
+
+.home-container img {
+  position: relative;
+  background: linear-gradient(135deg, #E6E6FA, #D8BFD8);
+  padding: 1rem;
+  border-radius: 16px;
+  box-shadow: 0 0 12px rgba(106, 90, 205, 0.25);
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }

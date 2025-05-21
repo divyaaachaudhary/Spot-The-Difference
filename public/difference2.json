@@ -1,0 +1,39 @@
+{
+    "gameTitle": "Spot the Difference - Level-2",
+    "images": {
+        "image1": "/assets/image3.png",
+        "image2": "/assets/image4.png"
+    },
+    "differences": [
+        {
+            "x": 131,
+            "y": 96,
+            "width": 39,
+            "height": 22
+        },
+        {
+            "x": 86,
+            "y": 168,
+            "width": 35,
+            "height": 22
+        },
+        {
+            "x": 170,
+            "y": 233,
+            "width": 35,
+            "height": 37
+        },
+        {
+            "x": 9,
+            "y": 21,
+            "width": 36,
+            "height": 35
+        },
+        {
+            "x": 11,
+            "y": 250,
+            "width": 36,
+            "height": 26
+        }
+    ]
+}
